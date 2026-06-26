@@ -8,7 +8,6 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 @Service
@@ -101,7 +100,6 @@ public class VehicleSchedulerService {
             result.selectedTaskIds = selectedTasks;
 
             optimalSchedules.add(result);
-            System.out.println("Final Result : "+ Arrays.asList(result));
             logMiddleware.Log("backend", "info", "service", "Optimized Depot ID " + depot.getId() + ": Score maximized to " + result.totalOperationalImpactScore);
         }
 
