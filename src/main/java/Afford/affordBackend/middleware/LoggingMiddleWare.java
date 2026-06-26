@@ -18,7 +18,7 @@ public class LoggingMiddleWare {
     @Value("${testserver.base-url}")
     private String baseUrl;
 
-    private static volatile String cachedToken = null;
+    public static volatile String cachedToken = null;
 
     public LoggingMiddleWare(RestTemplate restTemplate) {
         this.restTemplate = restTemplate;
